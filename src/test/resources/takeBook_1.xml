@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EBook>
+    <isbn>1</isbn>
+    <title>Title 1</title>
+    <price>19.99</price>
+    <numPages>1</numPages>
+</EBook>

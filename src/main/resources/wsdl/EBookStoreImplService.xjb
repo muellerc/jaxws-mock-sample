@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    version="2.1">
+
+    <jaxb:bindings schemaLocation="EBookStoreImplService_schema1.xsd">
+        <jaxb:bindings node="/xsd:schema[@targetNamespace='http://endpoint.jaxws.javaee7.org/']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="org.apache.cmueller.sample.model" />
+            </jaxb:schemaBindings>
+        </jaxb:bindings>
+    </jaxb:bindings>
+</jaxb:bindings>
