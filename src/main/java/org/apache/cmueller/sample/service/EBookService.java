@@ -20,7 +20,7 @@ public class EBookService implements EBookStore {
 
     @Override
     public EBook takeBook(String isbn) throws TakeBookFault {
-        InputStream is = getClass().getResourceAsStream(String.format("/takeBook_%s_exception.txt", isbn));
+        InputStream is = getClass().getResourceAsStream(String.format("/jaxws-mock-sample/takeBook_%s_exception.txt", isbn));
         if (is != null) {
             try {
                 throw new TakeBookFault(inputStreamAsString(is));
@@ -29,7 +29,7 @@ public class EBookService implements EBookStore {
             }
         }
         
-        is = getClass().getResourceAsStream(String.format("/takeBook_%s_timeout.txt", isbn));
+        is = getClass().getResourceAsStream(String.format("/jaxws-mock-sample/takeBook_%s_timeout.txt", isbn));
         if (is != null) {
             try {
                 Thread.sleep(inputStreamAsLong(is));
@@ -38,10 +38,10 @@ public class EBookService implements EBookStore {
             }
         }
         
-        is = getClass().getResourceAsStream(String.format("/takeBook_%s.xml", isbn));
+        is = getClass().getResourceAsStream(String.format("/jaxws-mock-sample/takeBook_%s.xml", isbn));
         if (is == null) {
             // take the default which is shipped with the mock
-            is = getClass().getResourceAsStream("/takeBook_default.xml");
+            is = getClass().getResourceAsStream("/jaxws-mock-sample/takeBook_default.xml");
         }
         
         return JAXB.unmarshal(is, EBook.class);

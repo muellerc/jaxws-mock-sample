@@ -13,7 +13,7 @@ to the standalone.xml file.
 
 Copy the ${basedir}/module.xml file to ${JBOSS_HOME}/modules/config/main
 
-Copy all *.xml files from ${basedir}/src/test/resources to ${JBOSS_HOME}/modules/config/main
+Copy all *.xml files from ${basedir}/src/test/resources/jaxws-mock-sample to ${JBOSS_HOME}/modules/config/main/jaxws-mock-sample
 
 # Build
 Execute: mvn clean install
